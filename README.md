@@ -52,3 +52,17 @@ method: POST
 IMPLEMENTATION
 percentile on api return includes if other users have same streak as the current user.
 
+
+IMPROVEMENTS
+Q: Document what, if anything, you would do differently if this were a production application and
+not an assessment? What tech would you use? How would you handle things differently if it
+needed to handle more users, more data, etc?
+
+A: for a production application, I would be more concerned with security(eg. not storing the passwords even hashed
+on a database), as well as more error handling to ensure the app is more stable and robust. Also, I would plan out the
+database tables so they don't have too much duplicate data and more foreign keys as the data grows. Also, I would try to
+make the API fast and efficient as possible with the implementation of the code, possibly storing the streak for users on
+the DB instead of calculating at execution so that we can just return it. Also, I would use a better database engine unlike
+sqlite that was used here, something like postgresDB.
+
+
